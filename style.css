@@ -1,0 +1,117 @@
+body {
+  width: 99vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #410800;
+  -webkit-overflow-scrolling: touch;
+  font-family: Arial;
+  color: #af7f67;
+}
+
+#app {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.credits {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  margin: 0.75rem 0.75rem;
+  font-size: 0.75rem;
+  color: #af7f67;
+  border: 1px solid #af7f67;
+  border-radius: 0.2rem;
+  opacity: 0;
+  transition: all 0.25s;
+  animation: fadeIn 5.5s ease-in forwards;
+}
+
+a {
+  transition: all 0.25s;
+  color: #af7f67;
+}
+
+a:link, a:visited {
+ text-decoration: none;
+}
+
+.credits:hover {
+  color: #d3c4ff;
+  border: 1px solid #d3c4ff;
+}
+
+a:hover {
+  color: #d3c4ff;
+}
+
+@keyframes fadeIn {
+  
+  0% { opacity: 0.0; }
+  75% { opacity: 0.0; }
+  100% { opacity: 1; }
+
+}
+
+svg {
+  margin: 0 auto;
+  width: 90vw;
+  height: auto;
+  max-height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+canvas {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+/*   background: #410800; */
+}
+
+#sticker-circle,
+#space-planet-overlay
+{
+  transition: 0.2s ease-in-out;
+}
+
+#sticker:hover, 
+#space-planet-overlay.active:hover  {
+  cursor: pointer;
+}
+
+.mobile {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/911157/ziggy-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  bacground-position: center;
+}
+
+/* Toggled classes */
+
+.ghost {
+  fill-opacity: 0;
+  stroke-width: 4px;
+  stroke: #fff4e9;
+}
+
+.active {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 800px) {
+  svg {
+    width: 100vw;
+  }
+}
